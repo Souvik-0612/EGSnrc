@@ -1,0 +1,24 @@
+=============================================================
+ Running ctcreate
+=============================================================
+
+
+ ************************************************************
+ 
+           CT formats currently supported:
+     ------------------------------ 
+ 
+           1. Pinnacle                    
+           2. CADPLAN 
+           3. DICOM                       
+
+
+ ************************************************************
+
+
+ Input the format of your CT data
+ :                                                        DICOM
+
+
+ Input the full name of the file of DICOM file names
+ : $OMEGA_HOME/progs/ctcreate/CT/DICOM/slice_names
