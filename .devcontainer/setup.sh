@@ -5,7 +5,8 @@
 # Install required packages
 echo "::step::Installing required packages for EGSnrc ..."
 sudo apt update
-sudo apt install -y git gcc g++ gfortran make tk wish grace libmotif-dev expect qtbase5-dev
+sudo apt install -y git gcc g++ gfortran make tk wish grace libmotif-dev expect qtbase5-dev at
+sudo service atd start
 
 # Build the application
 echo "::step::Building EGSnrc ..."
