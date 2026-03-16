@@ -21,4 +21,96 @@
 
 
  Input the full name of the file of DICOM file names
- : $OMEGA_HOME/progs/ctcreate/CT/DICOM/slice_names
+ : /workspaces/EGSnrc/EGSnrc-sample-data/CT/DICOM/slice_names
+--------------------------------------------
+CT Volume subset selection.
+Please enter the positions of limiting 
+planes (cm):
+  xctsubmin,xctsubmax,yctsubmin,yctsubmax,zctsubmin,zctsubmax
+ :  -150.0000  150.0000 -150.0000  150.0000  -45.0000   45.0000
+X lower limit out of bounds, will be set to 
+ lower bound.                               
+--------------------------------------------
+X upper limit out of bounds, will be set to 
+ upper bound.                                
+--------------------------------------------
+Y lower limit out of bounds, will be set to 
+ lower bound.                               
+--------------------------------------------
+Y upper limit out of bounds, will be set to 
+ upper bound.                               
+--------------------------------------------
+Z lower limit out of bounds, will be set to 
+ lower bound.                               
+--------------------------------------------
+Z upper limit out of bounds, will be set to 
+ upper bound.                               
+--------------------------------------------
+The voxel index limits are as follows:
+I Limits -> i=     1 to i=   512
+J Limits -> j=     1 to j=   512
+K Limits -> k=     1 to k=    10
+ xctsubmin,xctsubmax,yctsubmin,yctsubmax,zctsubmin,zctsubmax (cm)
+ after adjustment to fit integer no. of voxels 
+ :   -17.6640   17.6640  -17.6640   17.6640   -0.7000    4.3000
+============================================
+
+ Resample CT data for dosxyznrc 
+ --------------------------- 
+
+ Input the x,y,z dimensions (cm) of the dosxyznrc voxelson one line
+ (min=      0.27600 x     0.27600 x     0.03906 cm)
+ :     0.40000     0.40000     0.10000
+New X voxel thickness ->       0.40
+New Y voxel thickness ->       0.40
+New Z voxel thickness ->       0.10
+New number X voxels   ->         88
+New number Y voxels   ->         88
+New number Z voxels   ->         50
+ Final x,y,z dimensions of dosxyznrc voxels in cm (adjusted so that an integer
+ number fit exactly on the CT data):     0.40145     0.40145     0.10000
+Calculating bounds and new CT values
+
+ The CT-Density Ramp
+ -------------------
+
+ Number of media (max   20), min. CT number of ramp
+(0,0 if you want to use the hard-wired ramp function):          0         0
+
+ Using the following default CT ramp.
+ Note: Thisis optimized for display and example 
+ calculations.  It is recommended that you enter 
+ the CT conversion ramp for your own imager.
+
+ CT no. lower bound of ramp = -1024
+
+ Medium    1 : AIR700ICRU              
+ CT no. upper bound, density lower bound (g/cm^3),
+ density upper bound (g/cm^3)--all on one line
+ :  -974     0.00100     0.04400
+
+ Medium    2 : LUNG700ICRU             
+ CT no. upper bound, density lower bound (g/cm^3),
+ density upper bound (g/cm^3)--all on one line
+ :  -724     0.04400     0.30200
+
+ Medium    3 : ICRUTISSUE700ICRU       
+ CT no. upper bound, density lower bound (g/cm^3),
+ density upper bound (g/cm^3)--all on one line
+ :   101     0.30200     1.10100
+
+ Medium    4 : ICRPBONE700ICRU         
+ CT no. upper bound, density lower bound (g/cm^3),
+ density upper bound (g/cm^3)--all on one line
+ :  1976     1.10100     2.08800
+
+ Warning: CT number in      85657 voxels is < min. CT number of 
+ ramp (     -1024).  Medium in these voxels is set to 0 (vacuum).
+
+
+ Warning: CT number in         72 voxels is > max. CT number of 
+ ramp (      1976).  Medium in these voxels is set to medium no.    4
+
+
+ Writing CT phantom data into slice_names.egsphant to be read by dosxyznrc.
+
